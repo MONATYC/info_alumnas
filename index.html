@@ -9,19 +9,25 @@
 <style>
   body { 
     font-family: "Montserrat", sans-serif; 
-    background-color: #fbfbfb; 
+    background-color: #f3f4f6; 
     color: #2d3436; 
     line-height: 1.5; 
     font-size: 16px; 
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    min-height: 100vh;
   }
   .container-narrow {
-    max-width: 650px; 
+    width: 100%;
+    max-width: 800px; 
     margin: 0 auto;
     background: white;
-    padding: 2rem;
-    box-shadow: 0 0 40px rgba(0,0,0,0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
-  h1 { font-size: 2.2rem; font-weight: 900; color: #41a86b; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: -1px; }
+  h1 { font-size: 2.2rem; font-weight: 900; color: #41a86b; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: -1px; text-align: center; }
   h2 { font-size: 1.6rem; font-weight: 800; color: #2d3436; margin: 2rem 0 1rem 0; border-left: 6px solid #41a86b; padding-left: 1rem; text-transform: uppercase; }
   h3 { font-size: 1.2rem; font-weight: 700; color: #41a86b; margin: 1.5rem 0 0.8rem 0; }
   h4 { font-size: 0.9rem; font-weight: 800; color: #b2bec3; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
@@ -34,12 +40,12 @@
   .kpi-label { font-size: 0.65rem; font-weight: 700; color: #64748b; text-transform: uppercase; margin-top: 0.5rem; }
 
   .bar-row { display: flex; align-items: center; margin: 0.8rem 0; gap: 1rem; }
-  .bar-label { width: 140px; font-size: 0.8rem; font-weight: 600; color: #4a5568; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-label { width: 140px; font-size: 0.8rem; font-weight: 600; color: #4a5568; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex-shrink: 0; }
   .bar-track { flex: 1; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden; }
   .bar-fill { height: 100%; background: #41a86b; border-radius: 5px; }
-  .bar-value { width: 70px; font-size: 0.85rem; font-weight: 700; color: #1a202c; }
+  .bar-value { width: 70px; font-size: 0.85rem; font-weight: 700; color: #1a202c; text-align: right; }
 
-  .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; padding: 1rem; background: #fff; border: 1px dashed #e2e8f0; border-radius: 8px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; padding: 1rem; background: #fff; border: 1px dashed #e2e8f0; border-radius: 8px; justify-content: center; }
   .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; font-weight: 600; }
   .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
 
@@ -49,8 +55,27 @@
   
   .footer { margin-top: 4rem; text-align: center; font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
+  .header-logos { display: flex; justify-items: center; align-items: center; gap: 30px; margin-bottom: 1.5rem; justify-content: center; }
+
+  @media (max-width: 640px) {
+    body { padding: 1rem 0; background-color: white; }
+    .container-narrow { box-shadow: none; padding: 1rem; max-width: 100%; border-radius: 0; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.3rem; margin: 1.5rem 0 0.8rem 0; border-left-width: 4px; }
+    .kpi-grid { grid-template-columns: 1fr; }
+    .bar-row { flex-direction: column; align-items: stretch; gap: 0.3rem; margin-bottom: 1.2rem; }
+    .bar-label { width: 100%; text-align: left; margin-bottom: 2px; }
+    .bar-value { width: 100%; text-align: right; margin-top: -1.4rem; position: relative; z-index: 2; color: #2d3436; }
+    .bar-track { height: 12px; }
+    .header-logos { gap: 15px; }
+    .header-logos img { height: 25px !important; }
+    .header-logos div { height: 20px !important; }
+    .card { padding: 1rem; }
+  }
+
   @media print {
-    .container-narrow { box-shadow: none; max-width: 100%; }
+    .container-narrow { box-shadow: none; max-width: 100%; padding: 0; }
+    body { background: white; }
   }
 </style>
 </head>
@@ -59,7 +84,7 @@
 <div class="container-narrow">
 
   <header style="text-align: center; margin-bottom: 2rem;">
-    <div style="display: flex; justify-items: center; align-items: center; gap: 30px; margin-bottom: 1.5rem; justify-content: center;">
+    <div class="header-logos">
       <img src="https://fundaciomona.org/wp-content/uploads/2023/09/logo.png" style="height: 35px;">
       <div style="width: 1px; height: 25px; background: #e2e8f0;"></div>
       <img src="https://www.fundacioudg.org/image/fundacio_UdG_25_es.png" style="height: 35px;">
