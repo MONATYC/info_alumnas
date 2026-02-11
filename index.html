@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informe Alumnado 2026 — Diploma Primatología</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { 
+    font-family: "Montserrat", sans-serif; 
+    background-color: #fbfbfb; 
+    color: #2d3436; 
+    line-height: 1.5; 
+    font-size: 16px; 
+  }
+  .container-narrow {
+    max-width: 650px; 
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0,0,0,0.05);
+  }
+  h1 { font-size: 2.2rem; font-weight: 900; color: #41a86b; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: -1px; }
+  h2 { font-size: 1.6rem; font-weight: 800; color: #2d3436; margin: 2rem 0 1rem 0; border-left: 6px solid #41a86b; padding-left: 1rem; text-transform: uppercase; }
+  h3 { font-size: 1.2rem; font-weight: 700; color: #41a86b; margin: 1.5rem 0 0.8rem 0; }
+  h4 { font-size: 0.9rem; font-weight: 800; color: #b2bec3; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  
+  .card { background: #fdfdfd; padding: 1.5rem; border-radius: 12px; border: 1px solid #edf2f7; margin-bottom: 1.5rem; }
+  
+  .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+  .kpi-box { background: #f8fafc; padding: 1rem; border-radius: 12px; text-align: center; border: 1px solid #e2e8f0; display: flex; flex-direction: column; justify-content: center; min-height: 120px; }
+  .kpi-value { font-size: 1.8rem; font-weight: 800; color: #41a86b; display: block; line-height: 1.2; }
+  .kpi-label { font-size: 0.65rem; font-weight: 700; color: #64748b; text-transform: uppercase; margin-top: 0.5rem; }
+
+  .bar-row { display: flex; align-items: center; margin: 0.8rem 0; gap: 1rem; }
+  .bar-label { width: 140px; font-size: 0.8rem; font-weight: 600; color: #4a5568; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-track { flex: 1; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden; }
+  .bar-fill { height: 100%; background: #41a86b; border-radius: 5px; }
+  .bar-value { width: 70px; font-size: 0.85rem; font-weight: 700; color: #1a202c; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; padding: 1rem; background: #fff; border: 1px dashed #e2e8f0; border-radius: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; font-weight: 600; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  .tag { display: inline-block; background: #f0fdf4; color: #166534; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #bbf7d0; margin: 0.2rem; }
+  
+  .divider { height: 2px; background: #f1f5f9; margin: 2rem 0; }
+  
+  .footer { margin-top: 4rem; text-align: center; font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+  @media print {
+    .container-narrow { box-shadow: none; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container-narrow">
+
+  <header style="text-align: center; margin-bottom: 2rem;">
+    <div style="display: flex; justify-items: center; align-items: center; gap: 30px; margin-bottom: 1.5rem; justify-content: center;">
+      <img src="https://fundaciomona.org/wp-content/uploads/2023/09/logo.png" style="height: 35px;">
+      <div style="width: 1px; height: 25px; background: #e2e8f0;"></div>
+      <img src="https://www.fundacioudg.org/image/fundacio_UdG_25_es.png" style="height: 35px;">
+    </div>
+    <h1>Informe Alumnado</h1>
+    <p style="font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">Diploma Investigación Primatología 2026</p>
+  </header>
+
+  <!-- 1. KPIs -->
+  <div class="kpi-grid">
+    <div class="kpi-box">
+      <div class="kpi-value">10</div>
+      <div class="kpi-label">Matrículas Totales</div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-value"><div>90.0% ♀</div><div style="font-size: 1.4rem; opacity: 0.8; margin-top: 0.2rem;">10.0% ♂</div></div>
+      <div class="kpi-label">Ratio de Género</div>
+    </div>
+  </div>
+
+  <!-- 2. EDAD -->
+  <div class="card">
+    <h3 style="margin-bottom: 1.2rem; color: #41a86b;">Perfil por Edad</h3>
+    <div style="width: 100%;"><div class="bar-row">
+        <span class="bar-label">20-25</span>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#41a86b"></div></div>
+        <span class="bar-value">5 (83.3%)</span>
+    </div><div class="bar-row">
+        <span class="bar-label">31-40</span>
+        <div class="bar-track"><div class="bar-fill" style="width:20%;background:#41a86b"></div></div>
+        <span class="bar-value">1 (16.7%)</span>
+    </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3. ORIGEN -->
+  <div class="card" style="border-top: 4px solid #41a86b;">
+    <h4 style="text-align: center; margin-bottom: 1rem;">Origen Geográfico</h4>
+    <div style="display: flex; width: 100%; height: 26px; border-radius: 6px; overflow: hidden; margin-bottom: 1.2rem;"><div style="width: 40.0%; background: #a3d9bc; border-right: 2px solid #fff;" title="Resto de España: 4"></div><div style="width: 40.0%; background: #41a86b; border-right: 2px solid #fff;" title="Cataluña: 4"></div><div style="width: 20.0%; background: #1e293b; border-right: 2px solid #fff;" title="Fuera de España: 2"></div></div><div class="legend" style="justify-content: center; border: none; padding: 0; margin-top: 0;"><div class="legend-item">
+          <div class="legend-dot" style="background: #a3d9bc"></div>
+          <span>Resto de España: 4</span>
+        </div><div class="legend-item">
+          <div class="legend-dot" style="background: #41a86b"></div>
+          <span>Cataluña: 4</span>
+        </div><div class="legend-item">
+          <div class="legend-dot" style="background: #1e293b"></div>
+          <span>Fuera de España: 2</span>
+        </div></div></div>
+  <!-- 4. UBICACIÓN -->
+  <div class="card">
+    <h3>Ubicación Actual</h3>
+    <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">Ciudades de residencia (Registro Completo):</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;"><span class="tag">Girona (2)</span><span class="tag">Almería (1)</span><span class="tag">Lisboa (Portugal) (1)</span><span class="tag">San Bonifacio (Itàlia) (1)</span><span class="tag">Vilassar De Mar (Barcelona) (1)</span><span class="tag">Portocolom (Illes Balears) (1)</span><span class="tag">Barcelona (1)</span><span class="tag">Albons (Girona) (1)</span><span class="tag">Coslada (Madrid) (1)</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 5. FORMACIÓN -->
+  <div class="card">
+    <h3 style="margin-bottom: 1rem;">Formación Académica</h3>
+    <p style="font-size: 0.8rem; color: #64748b; margin-top: -0.5rem; margin-bottom: 1.2rem;">Perfil multidisciplinar con base mayoritaria en ciencias de la vida:</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+      <div style="background: #f8fafc; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #1e293b;">Biología</span>
+        <span style="background: #41a86b; color: white; border-radius: 4px; padding: 0.1rem 0.5rem; font-size: 0.75rem; font-weight: 800;">7</span>
+      </div>
+      <div style="background: #f8fafc; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #1e293b;">Ciencias Ambientales</span>
+        <span style="background: #41a86b; color: white; border-radius: 4px; padding: 0.1rem 0.5rem; font-size: 0.75rem; font-weight: 800;">1</span>
+      </div>
+      <div style="background: #f8fafc; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #1e293b;">Ciencias Naturales / Biología</span>
+        <span style="background: #41a86b; color: white; border-radius: 4px; padding: 0.1rem 0.5rem; font-size: 0.75rem; font-weight: 800;">1</span>
+      </div>
+      <div style="background: #f8fafc; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #1e293b;">Otra Formación Relacionada</span>
+        <span style="background: #41a86b; color: white; border-radius: 4px; padding: 0.1rem 0.5rem; font-size: 0.75rem; font-weight: 800;">1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. INTERESES -->
+  <h2>Intereses Académicos</h2>
+  <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 1.5rem; line-height: 1.4;">
+    Prioridades temáticas del grupo. Se muestra la posición media (ranking) de cada área según las preferencias del alumnado (1 es la mayor preferencia).
+  </p>
+  <div class="card"><div class="bar-row">
+          <span class="bar-label">Prácticas</span>
+          <div class="bar-track"><div class="bar-fill" style="width:79.1%;background:#41a86b"></div></div>
+          <span class="bar-value">pos. 2.67</span>
+        </div><div class="bar-row">
+          <span class="bar-label">Bienestar</span>
+          <div class="bar-track"><div class="bar-fill" style="width:72.9%;background:#60c98e"></div></div>
+          <span class="bar-value">pos. 3.17</span>
+        </div><div class="bar-row">
+          <span class="bar-label">Primatología</span>
+          <div class="bar-track"><div class="bar-fill" style="width:68.8%;background:#60c98e"></div></div>
+          <span class="bar-value">pos. 3.5</span>
+        </div><div class="bar-row">
+          <span class="bar-label">Legislación</span>
+          <div class="bar-track"><div class="bar-fill" style="width:68.8%;background:#60c98e"></div></div>
+          <span class="bar-value">pos. 3.5</span>
+        </div><div class="bar-row">
+          <span class="bar-label">Conservación</span>
+          <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:#60c98e"></div></div>
+          <span class="bar-value">pos. 4.0</span>
+        </div><div class="bar-row">
+          <span class="bar-label">Herramientas de Campo</span>
+          <div class="bar-track"><div class="bar-fill" style="width:58.4%;background:#60c98e"></div></div>
+          <span class="bar-value">pos. 4.33</span>
+        </div><div class="bar-row">
+          <span class="bar-label">Investigación</span>
+          <div class="bar-track"><div class="bar-fill" style="width:45.9%;background:#a3d9bc"></div></div>
+          <span class="bar-value">pos. 5.33</span>
+        </div><div class="bar-row">
+          <span class="bar-label">Recogida Datos</span>
+          <div class="bar-track"><div class="bar-fill" style="width:45.9%;background:#a3d9bc"></div></div>
+          <span class="bar-value">pos. 5.33</span>
+        </div>
+  </div>
+
+  <!-- 7. NIVEL -->
+  <h2>Nivel de Partida</h2>
+  <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 1.5rem; line-height: 1.4;">
+    Media de autoevaluación al inicio del programa. Los estudiantes califican su conocimiento y competencias en una escala del 1 (nulo) al 5 (experto).
+  </p>
+  <div class="kpi-grid">
+    <div class="kpi-box" style="border-bottom: 4px solid #41a86b;">
+      <div class="kpi-value">3.0<span style="font-size: 1rem; opacity: 0.5;">/5</span></div>
+      <div class="kpi-label">Conocimiento Ø</div>
+    </div>
+    <div class="kpi-box" style="border-bottom: 4px solid #1e293b;">
+      <div class="kpi-value">2.88<span style="font-size: 1rem; opacity: 0.5;">/5</span></div>
+      <div class="kpi-label">Competencias Ø</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Detalle de Conocimientos</h3><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Bienestar animal</span>
+          <div class="bar-track"><div class="bar-fill" style="width:73.4%;background:#41a86b"></div></div>
+          <span class="bar-value">3.67/5</span>
+        </div><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Conservación</span>
+          <div class="bar-track"><div class="bar-fill" style="width:70.0%;background:#41a86b"></div></div>
+          <span class="bar-value">3.5/5</span>
+        </div><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Primatología</span>
+          <div class="bar-track"><div class="bar-fill" style="width:53.4%;background:#60c98e"></div></div>
+          <span class="bar-value">2.67/5</span>
+        </div><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Legislación y protección</span>
+          <div class="bar-track"><div class="bar-fill" style="width:43.4%;background:#a3d9bc"></div></div>
+          <span class="bar-value">2.17/5</span>
+        </div>
+  </div>
+
+  <div class="card">
+    <h3>Detalle de Competencias</h3><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Redacción académica</span>
+          <div class="bar-track"><div class="bar-fill" style="width:66.6%;background:#475569"></div></div>
+          <span class="bar-value">3.33/5</span>
+        </div><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Presentaciones orales</span>
+          <div class="bar-track"><div class="bar-fill" style="width:66.6%;background:#475569"></div></div>
+          <span class="bar-value">3.33/5</span>
+        </div><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Diseño gráfico</span>
+          <div class="bar-track"><div class="bar-fill" style="width:63.4%;background:#475569"></div></div>
+          <span class="bar-value">3.17/5</span>
+        </div><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Gestión de bases de datos</span>
+          <div class="bar-track"><div class="bar-fill" style="width:53.4%;background:#475569"></div></div>
+          <span class="bar-value">2.67/5</span>
+        </div><div class="bar-row">
+          <span class="bar-label" style="width: 200px;">Análisis de datos</span>
+          <div class="bar-track"><div class="bar-fill" style="width:53.4%;background:#475569"></div></div>
+          <span class="bar-value">2.67/5</span>
+        </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 8. PERFIL (EXPERIENCIA) -->
+  <h2 id="perfil-detallado">Voz del Alumnado</h2>
+  
+  <div class="card">
+    <h3>Experiencia Previa</h3>
+    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+      <div style="flex: 1; background: #ecfdf5; padding: 1rem; border-radius: 12px; text-align: center;">
+        <div style="font-size: 1.5rem; font-weight: 800; color: #065f46;">5/6</div>
+        <div style="font-size: 0.7rem; font-weight: 700; color: #065f46; text-transform: uppercase;">Exp. Animales</div>
+      </div>
+      <div style="flex: 1; background: #f0f9ff; padding: 1rem; border-radius: 12px; text-align: center;">
+        <div style="font-size: 1.5rem; font-weight: 800; color: #075985;">3/6</div>
+        <div style="font-size: 0.7rem; font-weight: 700; color: #075985; text-transform: uppercase;">Exp. Primates</div>
+      </div>
+    </div>
+    <p style="font-size: 0.85rem; font-weight: 700; color: #41a86b; margin-bottom: 0.6rem;">Contextos destacados:</p>
+    <div style="font-size: 0.85rem; color: #475569; font-style: italic;"><p style="margin-bottom: 0.8rem; border-left: 2px solid #e2e8f0; padding-left: 1rem;">"Abril 2025: Introducción a la veterinaria de primates (Fundació MONA) Julio 2021: La vida emocional de los animales (Fundació MONA, online)"</p><p style="margin-bottom: 0.8rem; border-left: 2px solid #e2e8f0; padding-left: 1rem;">"Práticas Curricular en centro de recuperacion de fauna silvestre Voluntariado en el sanctuario de Rainfer Recorrida de datos para disertacion de master en Mona"</p><p style="margin-bottom: 0.8rem; border-left: 2px solid #e2e8f0; padding-left: 1rem;">"En Costa Rica, en Colombia y en Estados unidos"</p><p style="margin-bottom: 0.8rem; border-left: 2px solid #e2e8f0; padding-left: 1rem;">"Ape action cameroon congo bonobo parc Gombe en Kigoma tanzania, etc.."</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Proyección Profesional</h3>
+    <div style="display: grid; grid-gap: 1.5rem;">
+      <div>
+        <h4 style="color: #41a86b; font-size: 0.75rem;">Puestos deseados:</h4>
+        <div style="display: flex; flex-wrap: wrap;"><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">Gestión de bienestar animal en centros</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">Cuidador/a de primates o animales</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">Investigador/a</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">Conservación en proyectos de campo (in situ)</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">Educación ambiental / divulgación</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">Veterinaria o ámbito clínico</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="color: #41a86b; font-size: 0.75rem;">Lugares de interés:</h4>
+        <div style="display: flex; flex-wrap: wrap;"><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">En proyectos internacionales (in situ)</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">En Europa</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">En proyectos internacionales (ex situ)</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">En mi país de origen</span><span class="tag" style="background: #f8fafc; border-color: #e2e8f0; color: #1e293b;">Me encantaría poder trabajar en un futuro en Fundació MONA ya que es el único centro que me permite trabajar de mi pasión y cerca de mi casa (Girona).</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Motivaciones Principales</h3>
+    <div style="font-style: italic; color: #475569; border-left: 4px solid #41a86b; padding-left: 1.5rem;"><p style="margin-bottom: 1rem; font-size: 0.9rem;">"Crecer profesionalmente ya que los primates son animales muy concretos y aun no he podido trabajar con ellos. Creo que te pueden enseñar muchas cosas que luego podrás extrapolar a otros mamíferos. Tengo mucha curiosidad de saber como son sus personalidades ya que son muy inteligentes y requieren cuidados mas específicos."</p><p style="margin-bottom: 1rem; font-size: 0.9rem;">"Desde que acabé la carrera tengo claro que quiero trabajar con animales ya que son mi pasión y quiero hacerlo mi profesión. Me especializé en biología marina en Azores ya que es mi otra gran pasión aunque tengo otras muchas inquietudes y quiero aprender de muchos ámbitos diferentes relacionado com los animales. Me matriculé porque acababa de dejar un máster que no me llenaba y no me llevaba hasta los objetivos que quiero alcanzar. Lo vi como una oportunidad perfecta y el “timing” fue como la señal que necesitaba por dejar lo que no me hacía feliz y apostar por lo que sé que si me está hecho para mi."</p><p style="margin-bottom: 1rem; font-size: 0.9rem;">"desarrollo profesional en primatología"</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Fundació MONA · Fundació Universitat de Girona · 2026
+  </div>
+
+</div>
+
+</body>
+</html>
